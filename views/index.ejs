@@ -1,0 +1,10 @@
+<% if (!user) { %>
+	<h2>Welcome! Please log in.</h2>
+    <a href="/login">Log In</a>
+<% } else { %>
+	<h2>Hello, <%= user.displayName %>.</h2>
+
+    <img src="<%= user.photos[0].value %>" alt="some_text">
+<a href="/account">Account</a>
+<a href="/login">Log In</a>
+<% } %>
